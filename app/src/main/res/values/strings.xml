@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Two-Playa-Yatza</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="number_of_players">
+        <item>1 Player</item>
+        <item>2 Players</item>
+    </string-array>
+</resources>

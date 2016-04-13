@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="16"
+    android:padding="5dp"
+    android:background="@drawable/dice_background">
+
+    <LinearLayout
+        android:background="#CC555555"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/gameCurrentPlayerView"
+            android:text="Current Player: none"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:padding="10dp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/gameMessageView"
+            android:text="No message to show."
+            android:textSize="15sp"
+            android:gravity="center_horizontal|center_vertical"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:padding="10dp"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#DD000000"
+        android:orientation="horizontal"
+        android:weightSum="12"
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <RelativeLayout
+            android:layout_margin="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/gameRollButton"
+                android:text="Roll"
+                android:textAppearance="?android:attr/textAppearanceButton"
+                android:textSize="20sp"
+                android:background="@drawable/button_shape2"
+                android:layout_margin="3dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/gameDice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/gameDice1"
+                android:background="@color/diceColorUnselected"
+                android:layout_margin="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/gameDice2"
+                android:src="@drawable/dice_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <ImageView
+                android:id="@id/gameDice2"
+                android:background="@color/diceColorUnselected"
+                android:layout_margin="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@id/gameDice3"
+                android:src="@drawable/dice_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <ImageView
+                android:id="@id/gameDice3"
+                android:background="@color/diceColorUnselected"
+                android:layout_margin="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/dice_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <ImageView
+                android:id="@+id/gameDice4"
+                android:background="@color/diceColorUnselected"
+                android:layout_margin="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/gameDice3"
+                android:src="@drawable/dice_4"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <ImageView
+                android:id="@+id/gameDice5"
+                android:background="@color/diceColorUnselected"
+                android:layout_margin="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/gameDice4"
+                android:src="@drawable/dice_5"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#DD5555AA"
+        android:orientation="horizontal"
+        android:layout_weight="7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ListView
+            android:id="@+id/gameScoreBoard"
+            android:background="#FFFFAA"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#CC555555"
+        android:orientation="horizontal"
+        android:weightSum="8"
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/gamePlayer1Score"
+            android:text="n/a"
+            android:textSize="15sp"
+            android:gravity="center_horizontal|center_vertical"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:padding="10dp"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/gamePlayer2Score"
+            android:text="n/a"
+            android:textSize="15sp"
+            android:gravity="center_horizontal|center_vertical"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:padding="10dp"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/gameExitButton"
+            android:text="Exit"
+            android:textSize="20sp"
+            android:textAppearance="?android:attr/textAppearanceButton"
+            android:background="@drawable/button_shape2"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>
